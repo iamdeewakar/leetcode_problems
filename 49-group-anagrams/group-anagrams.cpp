@@ -15,8 +15,8 @@ public:
             sort(indexString.begin(),indexString.end());
             MapStore[indexString].push_back(str);
         }
-        for(auto i:MapStore){
-            res.push_back(i.second);
+        for(auto M:MapStore){
+            res.push_back(M.second);
         }
         return res;
         
