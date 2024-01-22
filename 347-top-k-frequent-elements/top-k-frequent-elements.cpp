@@ -3,8 +3,8 @@ public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
         vector<int>res;
         map<int,int>freq;
-        for(auto &vl:nums){
-            freq[vl]++;
+        for(auto &i:nums){
+            freq[i]++;
         }
         priority_queue<pair<int,int>>pq;
         for(auto &el : freq){
