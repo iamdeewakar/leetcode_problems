@@ -2,21 +2,16 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int n = nums.size();
-        if(nums.size()<1){
-            return 0;
+        unordered_map<int,int>frequencyMap;
+        for(int i=0;i<n;i++){
+          frequencyMap[nums[i]]++;  
         }
-        else if(nums.size() > 1){
-            sort(nums.begin(),nums.end());
-            for(int i=0;i<nums.size();i++){
-                if(nums[i] != nums[i+1]){
-                    return nums[i];
-                }
-
-                i++;
+        for(auto pair : frequencyMap){
+            if(pair.second == 1){
+                return pair.first;
             }
-
         }
-    
-        return nums[0];       
+
+        return 0;    
     }
 };
