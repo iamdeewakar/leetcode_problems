@@ -2,10 +2,10 @@ class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
         vector<int>ans(2*nums.size());
-        int j = 2*nums.size();
-        for(int i=0;i<nums.size();i++){
+        int n = nums.size();
+        for(int i=0;i<n;i++){
             ans[i]=nums[i];
-            ans[i+nums.size()] = nums[i];
+            ans[i+n] = nums[i];
         
         }
         
